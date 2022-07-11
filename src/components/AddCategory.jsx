@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 
 
-export default function AddCategory() {
+export default function AddCategory( { onNewCategory } ) {
     
-    const [inputValue, setinputValue] = useState("");
+    const [inputValue, setInputValue] = useState("");
 
     const onInputChange = (event) => {
-        setinputValue(event.target.value)
+        setInputValue(event.target.value)
     }
 
     const onSumit = (event) => {
-        event.preventDefault()
-        console.log( inputValue );
-        setinputValue("");
+        event.preventDefault();
+
+        const cleanInput = inputValue.trim();
+
+        if ( cleanInput <= 1 ) return;
+            
+        onNewCategory( cleanInput );
+
+        setInputValue("");
 
     }
 
