@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddCategory from "./components/AddCategory";
+import GifGrid from './components/GifGrid';
 
 
 
@@ -8,6 +9,9 @@ export default function componentName() {
   const [categories, setCategories] = useState( ["Carlos", "Mario"] );
 
   const onAddCategory = (newValue) => {
+
+    if ( categories.includes( newValue ) ) return;
+
     setCategories( [...categories, newValue] )
   }
 
@@ -17,10 +21,11 @@ export default function componentName() {
 
         <AddCategory onNewCategory = { (newValue) => onAddCategory( newValue ) }/>
 
+        { 
+          categories.map( category => ( <GifGrid key={ category } category={ category }/> ) ) 
+        }
 
-        <ol>
-          { categories.map( category => <li key={ category }> { category } </li> ) }
-        </ol>
+
     </>
   );
 }
