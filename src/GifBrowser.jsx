@@ -6,13 +6,13 @@ import GifGrid from './components/GifGrid';
 
 export default function componentName() {
   
-  const [categories, setCategories] = useState( ["Carlos"] );
+  const [categories, setCategories] = useState( ["goku"] );
 
   const onAddCategory = (newValue) => {
 
     if ( categories.includes( newValue ) ) return;
 
-    setCategories( [...categories, newValue] )
+    setCategories( [ newValue, ...categories ] )
   }
 
   return (
