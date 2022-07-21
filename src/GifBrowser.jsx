@@ -1,10 +1,10 @@
-import { useState } from "react";
-import AddCategory from "./components/AddCategory";
-import GifGrid from './components/GifGrid';
+import { useState } from 'react';
+import { AddCategory, GifGrid } from './components';
 
 
 
-export default function componentName() {
+
+export const GifBrowser = ()  => {
   
   const [categories, setCategories] = useState( ["goku"] );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import GifBrowser from './GifBrowser';
+import {GifBrowser} from './GifBrowser';
 
 import './styles.css';
 

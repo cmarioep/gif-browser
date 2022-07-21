@@ -1,6 +1,7 @@
 import React from 'react';
 
-export default function GifItem({ title, url }) {
+export const GifItem = ({ title, url }) => {
+  
   return (
 
     <div className='card'>

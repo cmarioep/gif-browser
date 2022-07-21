@@ -1,22 +1,15 @@
-
-import React from 'react';
-import { useEffect, useState } from 'react';
-
-import GifItem from './GifItem';
+import { GifItem } from './GifItem';
 import useFetchGifts from '../hooks/useFetchGifs';
 
 
 
 
-export default function GifGrid( {category} ) {
+export const GifGrid = ( { category } ) => {
 
 
   const { images, isLoading } = useFetchGifts( category )
   
-
   
-
-    
   return (
     <>
         <h3>{ category }</h3>
