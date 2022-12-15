@@ -5,7 +5,7 @@
 <div align="center">
   <img alt="Hero Screenshot" src="https://user-images.githubusercontent.com/53541185/204667133-64b49aa8-2546-4a89-be5f-f64a63a70008.png" />
 </div>
-<hr>
+
 A simple Gif Browser that connects to Giphy API and brings a list of gifs searched by user.
 
 ## Installation Running for Development
